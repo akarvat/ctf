@@ -1,0 +1,42 @@
+
+
+import java.util.ArrayList;
+
+public class team {
+	ArrayList <player> players;
+	flag myFlag;
+	
+	public team(String color) {
+		players = new ArrayList <player> ();
+		myFlag = new flag(color);
+	}
+	
+	public void addPlayer(player p) {
+		players.add(p);
+	}
+	
+	public void move() {
+		myFlag.move();
+		// For every player (name him/her "p") in the players
+		for (player p : players) {
+			p.move();
+		}
+	}
+	
+	public void draw() {
+		myFlag.draw();
+		for (player p : players) {
+			p.draw();
+		}
+	}
+
+	public boolean isTouching(player target) {
+		for (player p : players)
+			if (Math.abs(p.x - target.x)<20&&
+			Math.abs(p.y - target.y)< 20 {
+			return true;
+	}
+	
+		return false;
+	}
+}
