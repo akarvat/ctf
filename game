@@ -1,0 +1,24 @@
+
+
+import java.util.ArrayList;
+
+public class game {
+	// List of all the team objects.
+	ArrayList <team> teams;
+	
+	public game() {
+		teams = new ArrayList <team> ();
+	}
+	
+	public void draw() {
+		for (team t : teams) {
+			t.draw();
+		}
+	}
+	
+	public void move() {
+		for (team t : teams) {
+			t.move();
+		}
+	}
+}
